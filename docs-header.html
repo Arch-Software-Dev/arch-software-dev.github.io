@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-	<title>Aura professional responsive template</title>
+	<title>Header | Aura professional HTML5 template</title>
 	
 	<link rel="shortcut icon" href="/favicon.ico"/>
 
@@ -12,19 +12,13 @@
 	
 	<link rel="stylesheet" type="text/css" href="css/global.css"/>
 	
-	<link rel="stylesheet" type="text/css" href="3dParty/rs-plugin/css/pi.settings.css"/>
+	<link rel="stylesheet" type="text/css" href="3dParty/google-code-prettify/pi.css"/>
 	
 	<link rel="stylesheet" type="text/css" href="css/typo.css"/>
 	
 	<link rel="stylesheet" type="text/css" href="css/tooltips.css"/>
 	
 	<link rel="stylesheet" type="text/css" href="3dParty/colorbox/colorbox.css"/>
-	
-	<link rel="stylesheet" type="text/css" href="css/portfolio.css"/>
-	
-	<link rel="stylesheet" type="text/css" href="css/slider.css"/>
-	
-	<link rel="stylesheet" type="text/css" href="css/counters.css"/>
 	
 	<link rel="stylesheet" type="text/css" href="css/social.css"/>
 	
@@ -497,991 +491,161 @@
 </div>
 <!-- End header -->
 
-<div id="page"><!-- - - - - - - - - - SECTION - - - - - - - - - -->
+<div id="page"><div class="pi-section-w pi-section-white piGooglePrettify">
+	<div class="pi-section">
+		<h1>Docs - Headers</h1>
 
-<div class="tp-banner-container">
-<div class="tp-banner pi-revolution-slider" >
-<ul class="">	
+		<h2>Header elements</h2>
+		<p>
+			You can use elements below in header rows:
+		</p>
+		<ul>
+			<li>1 row strings including links and icons</li>
+			<li>Logos</li>
+			<li>Social links of different types</li>
+			<li>Social links</li>
+			<li>Inline forms</li>
+			<li>Buttons</li>
+			<li>Menus</li>
+		</ul>
 
-<!-- SLIDE -->
-<li data-transition="fade" data-slotamount="1" data-masterspeed="1000" >
-<!-- MAIN IMAGE -->
-<img src="img_external/revolution-slider/back-7.jpg"  alt=""  data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
-<!-- LAYERS -->
+		<p>Feel free to chose 1 header from our headers page or create your own version. Our prepared header version doesn't contains mobile menus, we will add them there soon. You need to create mobile menus by yourself using default header as an example by far.</p>
 
-<!-- LAYER NR. 1 -->
-<div class="tp-caption sfl fadeout"
-	 data-x="480"
-	 data-y="90"
-	 data-speed="800"
-	 data-start="1500"
-	 data-easing="Power4.easeOut"
-	 data-endspeed="300"
-	 data-endeasing="Power1.easeIn"
-	 data-captionhidden="on"
-	 style="z-index: 3"><img src="img_external/revolution-slider/young-women.png" alt="">
-</div>
+		<h2>Header Structure</h2>
+		<p>.pi-header block is main header wrapper, that include each header row</p>
+		<pre class="prettyprint lang-html">&lt;div class="pi-header"&gt;
+&nbsp;&nbsp;&lt;!-- header rows go here --&gt;
+&lt;/div&gt;</pre>
+		<p>Each header row is what is called "section", you can read about sections on  <a href="/docs-sections.html">Docs sections description page</a>. So in two words, section need to have wrapper with ".pi-section-w", header section wrapper need another class ".pi-section-header-w", section wrapper need to have another class that choose color scheme for section ".pi-section-dark" and one that choose size ".pi-row-sm-w". Eventually, section goes inside a wrapper, "pi-section pi-row-sm", color scheme class omitted here as we don't need that.</p>
+		<p>Code Example below shows header with two header rows small + large</p>
+		<pre class="prettyprint lang-html">&lt;div class="pi-header"&gt;
+&nbsp;&nbsp;&lt;div class="pi-section-w pi-section-dark"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="pi-section pi-row-sm"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- header row content go here --&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&lt;div class="pi-section-w pi-section-dark"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="pi-section pi-row-lg"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- header row content go here --&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&lt;/div&gt;
+&lt;/div&gt;</pre>
 
-<!-- LAYER NR. 2 -->
-<div class="tp-caption sfr fadeout"
-	 data-x="780"
-	 data-y="50"
-	 data-speed="800"
-	 data-start="1800"
-	 data-easing="Power4.easeOut"
-	 data-endspeed="300"
-	 data-endeasing="Power1.easeIn"
-	 data-captionhidden="on"
-	 style="z-index: 4"><img src="img_external/revolution-slider/young-men.png" alt="">
-</div>
+		<p>Let's add some elements into our rows.</p>
+		<p>Each header element needs to be wrapped with "pi-row-block" wrapper. Header logo wrapper have to have another class "pi-row-block-logo". Text blocks need wrapper need to have "pi-row-block-txt" class.</p>
+		<p>If you need right aligned header block, add "pi-pull-right" class. You will need revert right elements HTML div blocks, to make them be rendered in right order.</p>
+		<p>As we do responsive we need to add some more classes to our "pi-row-block" elements, to make them hidden or visible in some breakpoints. (see <a href="/docs-responsive-helpers.html">Visibility control classes.</a>) </p>
+		<pre class="prettyprint lang-html">&lt;div class="pi-header"&gt;
+&nbsp;&nbsp;&lt;div class="pi-section-w pi-section-dark"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="pi-section pi-row-sm"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Phone --&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="pi-row-block pi-row-block-txt"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i class="pi-row-block-icon icon-phone pi-icon-base pi-icon-square"&gt;&lt;/i&gt;Call Us: &lt;strong&gt;+7.906.229.2627&lt;/strong&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- End phone --&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Social icons --&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="pi-row-block pi-pull-right pi-hidden-2xs"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul class="pi-social-icons pi-stacked pi-jump pi-full-height pi-bordered pi-small pi-colored-bg clearFix"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#" class="pi-social-icon-twitter"&gt;&lt;i class="icon-twitter"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#" class="pi-social-icon-facebook"&gt;&lt;i class="icon-facebook"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- End social icons --&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Text --&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="pi-row-block pi-row-block-txt pi-pull-right pi-hidden-xs"&gt;Follow Us:&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- End text --&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&lt;div class="pi-section-w pi-section-dark"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="pi-section pi-row-lg"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Logo --&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="pi-row-block pi-row-block-logo"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="/index.html"&gt;&lt;img src="img/logo-base.png" alt=""&gt;&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- End logo --&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Menu --&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="pi-row-block pi-pull-right"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul class="pi-simple-menu pi-has-hover-border pi-full-height pi-hidden-sm"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Home --&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="active"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- End home --&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Company --&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="pi-has-dropdown"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;&lt;span&gt;Company&lt;/span&gt;&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul class="pi-submenu pi-has-border pi-items-have-borders pi-has-shadow pi-submenu-dark"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;About us&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Meet the team&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Testimonials&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Clients&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;We are hiring&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- End company --&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Company --&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="pi-has-dropdown"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;&lt;span&gt;Services&lt;/span&gt;&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul class="pi-submenu pi-has-border pi-items-have-borders pi-has-shadow pi-submenu-dark"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-lamp"&gt;&lt;/i&gt;Strategy solutions&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-monitor"&gt;&lt;/i&gt;Digital design&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-cog"&gt;&lt;/i&gt;Web development&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-link"&gt;&lt;/i&gt;Social marketing&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-feather"&gt;&lt;/i&gt;Copywriting&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- End company --&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Work --&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;&lt;span&gt;Work&lt;/span&gt;&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- End work --&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Blog --&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;&lt;span&gt;Blog&lt;/span&gt;&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- End blog --&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- End menu --&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&lt;/div&gt;
+&lt;/div&gt;</pre>
 
-<!-- LAYER NR. 3 -->
-<div class="tp-caption sft str"
-	 data-x="45" data-hoffset="0"
-	 data-y="157"
-	 data-speed="500"
-	 data-start="2400"
-	 data-easing="Back.easeInOut"
-	 data-endspeed="300"
-	 style="z-index: 5; font-size: 34px; color: #21252b; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; line-height: 40px; background: rgba(255, 255, 255, 0.9); padding: 12px 16px; border-radius: 3px; box-shadow: 0 1px 1px rgba(0,0,0,0.15);">
-	 AURA BY PI THEMES
-</div>
-
-<!-- LAYER NR. 4 -->
-<div class="tp-caption sfl str"
-	 data-x="45" data-hoffset="0"
-	 data-y="236"
-	 data-speed="500"
-	 data-start="2600"
-	 data-easing="Back.easeInOut"
-	 data-endspeed="300"
-	 style="z-index: 6; font-size: 20px; color: #fff; font-weight: 300; line-height: 28px; background: rgba(33, 37, 43, 0.8); padding: 12px 16px; border-radius: 3px;">
-	 Create cute websites fast with us!
-</div>
-
-<!-- LAYER NR. 5 -->
-<div class="tp-caption sfb str"
-	 data-x="45" data-hoffset="0"
-	 data-y="303"
-	 data-speed="500"
-	 data-start="2800"
-	 data-easing="Back.easeInOut"
-	 data-endspeed="300"
-	 style="z-index: 7;">
-	 <a href="http://themeforest.net/item/aura-responsive-multipurpose-template/7786132" class="btn pi-btn-base">
-		See on Envato
-	</a>
-</div>
-
-</li>	
-
-<!-- SLIDE  -->
-<li data-transition="fade" data-slotamount="1" data-masterspeed="1000" >
-<!-- MAIN IMAGE -->
-<img src="img_external/revolution-slider/back-8.jpg"  alt=""  data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
-<!-- LAYERS -->
-
-<!-- LAYER NR. 1 -->
-<div class="tp-caption sfb fadeout"
-	 data-x="535"
-	 data-y="28"
-	 data-speed="800"
-	 data-start="1500"
-	 data-easing="Power4.easeOut"
-	 data-endspeed="300"
-	 data-endeasing="Power1.easeIn"
-	 data-captionhidden="on"
-	 style="z-index: 3"><img src="img_external/revolution-slider/pad-hands.png" alt="">
-</div>
-
-<!-- LAYER NR. 2 -->
-<div class="tp-caption fade fadeout"
-	 data-x="677"
-	 data-y="72"
-	 data-speed="300"
-	 data-start="1700"
-	 data-easing="Power4.easeOut"
-	 data-endspeed="0"
-	 data-endeasing="Power1.easeIn"
-	 data-captionhidden="on"
-	 style="z-index: 4"><img src="img_external/revolution-slider/drawing-boy-1.png" alt="">
-</div>
-
-<!-- LAYER NR. 3 -->
-<div class="tp-caption fade fadeout"
-	 data-x="677"
-	 data-y="72"
-	 data-speed="300"
-	 data-start="3000"
-	 data-easing="Power4.easeOut"
-	 data-endspeed="0"
-	 data-endeasing="Power1.easeIn"
-	 data-captionhidden="on"
-	 style="z-index: 5"><img src="img_external/revolution-slider/drawing-boy-2.png" alt="">
-</div>
-
-<!-- LAYER NR. 4 -->
-<div class="tp-caption sft str"
-	 data-x="45" data-hoffset="0"
-	 data-y="157"
-	 data-speed="500"
-	 data-start="2400"
-	 data-easing="Back.easeInOut"
-	 data-endspeed="300"
-	 style="z-index: 6; font-size: 34px; color: #21252b; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; line-height: 40px; background: rgba(255, 255, 255, 0.9); padding: 12px 16px; border-radius: 3px; box-shadow: 0 1px 1px rgba(0,0,0,0.15);">
-	 Modi Tempora Incidunt
-</div>
-
-<!-- LAYER NR. 5 -->
-<div class="tp-caption sfl str"
-	 data-x="45" data-hoffset="0"
-	 data-y="236"
-	 data-speed="500"
-	 data-start="2600"
-	 data-easing="Back.easeInOut"
-	 data-endspeed="300"
-	 style="z-index: 7; font-size: 20px; color: #fff; font-weight: 300; line-height: 28px; background: rgba(33, 37, 43, 0.8); padding: 12px 16px; border-radius: 3px;">
-	 Dolore Magnam Aliquam Quaerat Voluptatem
-</div>
-
-<!-- LAYER NR. 6 -->
-<div class="tp-caption sfb str"
-	 data-x="45" data-hoffset="0"
-	 data-y="303"
-	 data-speed="500"
-	 data-start="2800"
-	 data-easing="Back.easeInOut"
-	 data-endspeed="300"
-	 style="z-index: 8;">
-	<a href="#" class="btn pi-btn-base">
-		<i class="icon-cog pi-icon-left"></i>Our services
-	</a>
-</div>
-
-</li>
-
-<!-- SLIDE  -->
-<li data-transition="fade" data-slotamount="1" data-masterspeed="1000" >
-<!-- MAIN IMAGE -->
-<img src="img_external/revolution-slider/back-10.jpg"  alt=""  data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
-<!-- LAYERS -->
-
-<!-- LAYER NR. 1 -->
-<div class="tp-caption sfb fadeout"
-	 data-x="815"
-	 data-y="252"
-	 data-speed="900"
-	 data-start="1000"
-	 data-easing="Power4.easeOut"
-	 data-endspeed="300"
-	 data-endeasing="Power1.easeIn"
-	 data-captionhidden="on"
-	 style="z-index: 3"><img src="img_external/revolution-slider/men-head.png" alt="">
-</div>
-
-<!-- LAYER NR. 2 -->
-<div class="tp-caption sfb fadeout"
-	 data-x="435"
-	 data-y="270"
-	 data-speed="900"
-	 data-start="1300"
-	 data-easing="Power4.easeOut"
-	 data-endspeed="300"
-	 data-endeasing="Power1.easeIn"
-	 data-captionhidden="on"
-	 style="z-index: 4"><img src="img_external/revolution-slider/women-head.png" alt="">
-</div>
-
-<!-- LAYER NR. 3 -->
-<div class="tp-caption sft fadeout"
-	 data-x="720"
-	 data-y="97"
-	 data-speed="800"
-	 data-start="2000"
-	 data-easing="Power4.easeOut"
-	 data-endspeed="300"
-	 data-endeasing="Power1.easeIn"
-	 data-captionhidden="on"
-	 style="z-index: 5"><img src="img_external/revolution-slider/light-bulb-3.png" alt="">
-</div>
-
-<!-- LAYER NR. 4 -->
-<div class="tp-caption fade fadeout"
-	 data-x="669"
-	 data-y="43"
-	 data-speed="500"
-	 data-start="2400"
-	 data-easing="Power4.easeOut"
-	 data-endspeed="300"
-	 data-endeasing="Power1.easeIn"
-	 data-captionhidden="on"
-	 style="z-index: 6"><img src="img_external/revolution-slider/light-bulb-4.png" alt="">
-</div>
-
-<!-- LAYER NR. 5 -->
-<div class="tp-caption sft str"
-	 data-x="45" data-hoffset="0"
-	 data-y="157"
-	 data-speed="500"
-	 data-start="2400"
-	 data-easing="Back.easeInOut"
-	 data-endspeed="300"
-	 style="z-index: 7; font-size: 34px; color: #21252b; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; line-height: 40px; background: rgba(255, 255, 255, 0.9); padding: 12px 16px; border-radius: 3px; box-shadow: 0 1px 1px rgba(0,0,0,0.15);">
-	 Voluptas Assumenda Est
-</div>
-
-<!-- LAYER NR. 6 -->
-<div class="tp-caption sfl str"
-	 data-x="45" data-hoffset="0"
-	 data-y="236"
-	 data-speed="500"
-	 data-start="2600"
-	 data-easing="Back.easeInOut"
-	 data-endspeed="300"
-	 style="z-index: 8; font-size: 20px; color: #fff; font-weight: 300; line-height: 28px; background: rgba(33, 37, 43, 0.8); padding: 12px 16px; border-radius: 3px;">
-	 Quod Maxime Placeat Facere Possimus
-</div>
-
-<!-- LAYER NR. 7 -->
-<div class="tp-caption sfb str"
-	 data-x="45" data-hoffset="0"
-	 data-y="303"
-	 data-speed="500"
-	 data-start="2800"
-	 data-easing="Back.easeInOut"
-	 data-endspeed="300"
-	 style="z-index: 9;">
-	 <a href="#" class="btn pi-btn-base">
-		<i class="icon-mail pi-icon-left"></i>Get in touch
-	</a>
-</div>
-
-</li>
-
-</ul>
-</div>
-</div>
-
-<span class="revolution-slider"></span>
-
-<!-- - - - - - - - - - END SECTION - - - - - - - - - -->
-
-<!-- - - - - - - - - - SECTION - - - - - - - - - -->
-
-<div class="pi-section-w pi-shadow-inside-top pi-section-dark">
-	<div class="pi-texture" style="background: url(img/hexagon.png) repeat;"></div>
-	<div class="pi-section pi-padding-top-50 pi-padding-bottom-30">
-		
-		<!-- Row -->
-		<div class="pi-row">
-			
-			<!-- Col 9 -->
-			<div class="pi-col-sm-9 pi-center-text-xs">
-				<h3 class="pi-weight-300">
-					Want to say Hey or find out more?
-				</h3>
-				
-				<p class="lead-16">
-					Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
-				</p>
-			</div>
-			<!-- End col 9 -->
-
-			<div class="pi-clearfix pi-visible-xs"></div>
-
-			<!-- Col 3 -->
-			<div class="pi-col-sm-3 pi-text-right pi-center-text-xs">
-				<p class="pi-margin-top-5">
-					<a href="#" class="btn pi-btn-base pi-btn-no-border pi-btn-big">
-						Get a Free Quote
-					</a>
-				</p>
-			</div>
-			<!-- End col 3 -->
-			
-		</div>
-		<!-- End row -->
-
+		<h2>Sticky headers</h2>
+		<p>Wrap rows that needs to be always on top into block with class "pi-header-sticky"</p>
+		<pre class="prettyprint lang-html">&lt;div class="pi-header"&gt;
+&nbsp;&nbsp;&lt;div class="pi-section-w pi-section-dark"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="pi-section pi-row-sm"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- This row is ouside of "pi-header-sticky" so it will be hidden after scroll --&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&lt;div class="pi-header-sticky"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="pi-section-w pi-section-dark"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="pi-section pi-row-lg"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- This row is inside "pi-header-sticky" so it will be fixed on top --&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&lt;/div&gt;
+&lt;/div&gt;</pre>
+		<h2>Reducible large row</h2>
+		<p>Your large rows that are inside sticky header could be reduced after user scrolls them a bit. Just add "pi-row-reducible" class to large header section wrapper.</p>
+		<pre class="prettyprint lang-html">&lt;div class="pi-header"&gt;
+&nbsp;&nbsp;&lt;div class="pi-section-w pi-section-dark"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="pi-section pi-row-sm"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- This row is ouside of "pi-header-sticky" so it will be hidden after scroll --&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&lt;div class="pi-header-sticky"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="pi-section-w pi-section-dark pi-row-reducible"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="pi-section pi-row-lg"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- This row is inside "pi-header-sticky" so it will be fixed on top --&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&lt;/div&gt;
+&lt;/div&gt;</pre>
 	</div>
-</div>
-
-<!-- - - - - - - - - - END SECTION - - - - - - - - - -->
-
-<!-- - - - - - - - - - SECTION - - - - - - - - - -->
-
-<div class="pi-section-w pi-section-white piCounter">
-	<div class="pi-section pi-padding-bottom-30">
-		
-		<h2 class="h4 pi-weight-700 pi-uppercase pi-letter-spacing pi-has-bg pi-margin-bottom-25">
-			Recent Work
-		</h2>
-		
-		<!-- Portfolio gallery -->
-		<div class="pi-row pi-liquid-col-xs-3 pi-gallery pi-padding-bottom-20">
-			
-			<!-- Portfolio item -->
-			<div class="pi-gallery-item pi-padding-bottom-40">
-				<div class="pi-img-w pi-img-round-corners pi-img-shadow">
-					<a href="img_external/gallery/bread-and-spikes.jpg" class="pi-colorbox">
-						<img src="img_external/gallery/bread-and-spikes.jpg" alt="">
-						<div class="pi-img-overlay pi-img-overlay-darker">
-							<div class="pi-caption-centered">
-								<div>
-									<span class="pi-caption-icon pi-caption-scale icon-search"></span>
-								</div>
-							</div>
-						</div>
-					</a>
-				</div>
-				<h3 class="h6 pi-weight-700 pi-uppercase pi-letter-spacing pi-margin-bottom-5"><a href="#" class="pi-link-dark">Bread and spikes</a></h3>
-				<ul class="pi-meta">
-					<li><i class="icon-tag"></i><a href="#">Food</a>, <a href="#">Nature</a></li>
-				</ul>
-			</div>
-			<!-- End portfolio item -->
-			
-			<!-- Portfolio item -->
-			<div class="pi-gallery-item pi-padding-bottom-40">
-				<div class="pi-img-w pi-img-round-corners pi-img-shadow">
-					<a href="img_external/gallery/sailing.jpg" class="pi-colorbox">
-						<img src="img_external/gallery/sailing.jpg" alt="">
-						<div class="pi-img-overlay pi-img-overlay-darker">
-							<div class="pi-caption-centered">
-								<div>
-									<span class="pi-caption-icon pi-caption-scale icon-plus"></span>
-								</div>
-							</div>
-						</div>
-					</a>
-				</div>
-				<h3 class="h6 pi-weight-700 pi-uppercase pi-letter-spacing pi-margin-bottom-5"><a href="#" class="pi-link-dark">Sailing</a></h3>
-				<ul class="pi-meta">
-					<li><i class="icon-tag"></i><a href="#">Travel</a>, <a href="#">Lifestyle</a></li>
-				</ul>
-			</div>
-			<!-- End portfolio item -->
-			
-			<!-- Portfolio item -->
-			<div class="pi-gallery-item pi-padding-bottom-40">
-				<div class="pi-img-w pi-img-round-corners pi-img-shadow">
-					<a href="img_external/gallery/woman-at-the-wall.jpg" class="pi-colorbox">
-						<img src="img_external/gallery/woman-at-the-wall.jpg" alt="">
-						<div class="pi-img-overlay pi-img-overlay-darker">
-							<div class="pi-caption-centered">
-								<div>
-									<span class="pi-caption-icon pi-caption-scale icon-plus"></span>
-								</div>
-							</div>
-						</div>
-					</a>
-				</div>
-				<h3 class="h6 pi-weight-700 pi-uppercase pi-letter-spacing pi-margin-bottom-5"><a href="#" class="pi-link-dark">Woman at the wall</a></h3>
-				<ul class="pi-meta">
-					<li><i class="icon-tag"></i><a href="#">Beautiful</a>, <a href="#">Travel</a></li>
-				</ul>
-			</div>
-			<!-- End portfolio item -->
-			
-		</div>
-		<!-- End portfolio gallery -->
-		
-		<h2 class="h4 pi-weight-700 pi-uppercase pi-letter-spacing pi-has-bg pi-margin-bottom-30">
-			What We Offer
-		</h2>
-		
-		<!-- Row -->
-		<div class="pi-row">
-			
-			<!-- Col 4 -->
-			<div class="pi-col-xs-6 pi-col-sm-4 pi-padding-bottom-10">
-			
-				<div class="pi-icon-box pi-icon-box-hover">
-				
-					<div class="pi-icon-box-icon pi-icon-box-icon-base">
-						<i class="icon-lamp"></i>
-					</div>
-					
-					<div class="pi-icon-box-content">
-					
-						<h4><a href="#" class="pi-link-dark">Strategy Solutions</a></h4>
-
-						<p class="pi-margin-bottom-10">
-							Sed ut perspiciatis unde omnis iste natus sit voluptatem
-						</p>
-						
-						<p>
-							<a href="#">More info<i class="icon-right-open-mini pi-icon-right"></i></a>
-						</p>
-						
-					</div>
-					
-				</div>
-				
-			</div>
-			<!-- End col 4 -->
-			
-			<!-- Col 4 -->
-			<div class="pi-col-xs-6 pi-col-sm-4 pi-padding-bottom-10">
-			
-				<div class="pi-icon-box pi-icon-box-hover">
-				
-					<div class="pi-icon-box-icon pi-icon-box-icon-base">
-						<i class="icon-monitor"></i>
-					</div>
-					
-					<div class="pi-icon-box-content">
-					
-						<h4><a href="#" class="pi-link-dark">Digital Design</a></h4>
-
-						<p class="pi-margin-bottom-10">
-							Sed ut perspiciatis unde omnis iste natus sit voluptatem
-						</p>
-						
-						<p>
-							<a href="#">More info<i class="icon-right-open-mini pi-icon-right"></i></a>
-						</p>
-						
-					</div>
-					
-				</div>
-				
-			</div>
-			<!-- End col 4 -->
-
-			<div class="pi-clearfix pi-visible-xs"></div>
-
-			<!-- Col 4 -->
-			<div class="pi-col-xs-6 pi-col-sm-4 pi-padding-bottom-10">
-			
-				<div class="pi-icon-box pi-icon-box-hover">
-				
-					<div class="pi-icon-box-icon pi-icon-box-icon-base">
-						<i class="icon-pencil"></i>
-					</div>
-					
-					<div class="pi-icon-box-content">
-					
-						<h4><a href="#" class="pi-link-dark">Illustration</a></h4>
-
-						<p class="pi-margin-bottom-10">
-							Sed ut perspiciatis unde omnis iste natus sit voluptatem
-						</p>
-						
-						<p>
-							<a href="#">More info<i class="icon-right-open-mini pi-icon-right"></i></a>
-						</p>
-						
-					</div>
-					
-				</div>
-				
-			</div>
-			<!-- End col 4 -->
-			
-			<div class="pi-clearfix pi-hide pi-visible-sm-only"></div>
-			
-			<!-- Col 4 -->
-			<div class="pi-col-xs-6 pi-col-sm-4 pi-padding-bottom-10">
-			
-				<div class="pi-icon-box pi-icon-box-hover">
-				
-					<div class="pi-icon-box-icon pi-icon-box-icon-base">
-						<i class="icon-cog"></i>
-					</div>
-					
-					<div class="pi-icon-box-content">
-					
-						<h4><a href="#" class="pi-link-dark">Web Development</a></h4>
-
-						<p class="pi-margin-bottom-10">
-							Sed ut perspiciatis unde omnis iste natus sit voluptatem
-						</p>
-						
-						<p>
-							<a href="#">More info<i class="icon-right-open-mini pi-icon-right"></i></a>
-						</p>
-						
-					</div>
-					
-				</div>
-				
-			</div>
-			<!-- End col 4 -->
-
-			<div class="pi-clearfix pi-visible-xs"></div>
-
-			<!-- Col 4 -->
-			<div class="pi-col-xs-6 pi-col-sm-4 pi-padding-bottom-20">
-			
-				<div class="pi-icon-box pi-icon-box-hover">
-				
-					<div class="pi-icon-box-icon pi-icon-box-icon-base">
-						<i class="icon-mobile"></i>
-					</div>
-					
-					<div class="pi-icon-box-content">
-					
-						<h4><a href="#" class="pi-link-dark">App Development</a></h4>
-
-						<p class="pi-margin-bottom-10">
-							Sed ut perspiciatis unde omnis iste natus sit voluptatem
-						</p>
-						
-						<p>
-							<a href="#">More info<i class="icon-right-open-mini pi-icon-right"></i></a>
-						</p>
-						
-					</div>
-					
-				</div>
-				
-			</div>
-			<!-- End col 4 -->
-			
-			<!-- Col 4 -->
-			<div class="pi-col-xs-6 pi-col-sm-4 pi-padding-bottom-20">
-			
-				<div class="pi-icon-box pi-icon-box-hover">
-				
-					<div class="pi-icon-box-icon pi-icon-box-icon-base">
-						<i class="icon-search"></i>
-					</div>
-					
-					<div class="pi-icon-box-content">
-					
-						<h4><a href="#" class="pi-link-dark">S.E.O.</a></h4>
-
-						<p class="pi-margin-bottom-10">
-							Sed ut perspiciatis unde omnis iste natus sit voluptatem
-						</p>
-						
-						<p>
-							<a href="#">More info<i class="icon-right-open-mini pi-icon-right"></i></a>
-						</p>
-						
-					</div>
-					
-				</div>
-				
-			</div>
-			<!-- End col 4 -->
-			
-		</div>
-		<!-- End row -->
-		
-	</div>
-</div>
-
-<!-- - - - - - - - - - END SECTION - - - - - - - - - -->
-		
-<!-- - - - - - - - - - SECTION - - - - - - - - - -->
-
-<div class="pi-section-w pi-section-parallax pi-slider-enabled" style="background-image: url(img_external/gallery/consulting.jpg);">
-	<div class="pi-texture" style="background: rgba(30, 35, 41, 0.7);"></div>
-	<div class="pi-section pi-padding-top-100 pi-padding-bottom-80">
-		
-		<!-- Slider -->
-		<div class="pi-slider-wrapper pi-slider-arrows-inside pi-slider-show-arrow-hover pi-text-center">
-			<div class="pi-slider pi-slider-animate-opacity">
-				
-				<!-- Row -->
-				<div class="pi-row">
-					
-					<!-- Col 8 -->
-					<div class="pi-col-sm-8 pi-col-sm-offset-2">
-				
-						<!-- Slide -->
-						<div class="pi-slide">	
-							<p class="lead-30 pi-margin-bottom-20 pi-text-white pi-text-shadow">
-								Dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.
-							</p>
-							<p class="pi-text-base">
-								<i class="icon-star">
-								</i>
-								<i class="icon-star">
-								</i>
-								<i class="icon-star">
-								</i>
-							</p>
-							<p class="lead-18 pi-weight-700 pi-text-white pi-uppercase pi-letter-spacing pi-margin-bottom-5">
-								Mattias Nuffer
-							</p>
-							<p class="pi-italic">
-								Executive Director <a href="#">Company Inc.</a>
-							</p>
-						</div>
-						<!-- End slide -->
-						
-						<!-- Slide -->
-						<div class="pi-slide">	
-							<p class="lead-30 pi-margin-bottom-20 pi-text-white pi-text-shadow">
-								Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi at vero eos et accusamus et iusto odio dignis.
-							</p>
-							<p class="pi-text-base">
-								<i class="icon-star">
-								</i>
-								<i class="icon-star">
-								</i>
-								<i class="icon-star">
-								</i>
-							</p>
-							<p class="lead-18 pi-weight-700 pi-text-white pi-uppercase pi-letter-spacing pi-margin-bottom-5">
-								Jim Terrell
-							</p>
-							<p class="pi-italic">
-								Project Director <a href="#">Company Inc.</a>
-							</p>
-						</div>
-						<!-- End slide -->
-						
-						<!-- Slide -->
-						<div class="pi-slide">	
-							<p class="lead-30 pi-margin-bottom-20 pi-text-white pi-text-shadow">
-								Corrupti quos dolores et quas molestias excepturi praesentium voluptatum deleniti atque at vero eos et accusamus ducimus.
-							</p>
-							<p class="pi-text-base">
-								<i class="icon-star">
-								</i>
-								<i class="icon-star">
-								</i>
-								<i class="icon-star">
-								</i>
-							</p>
-							<p class="lead-18 pi-weight-700 pi-text-white pi-uppercase pi-letter-spacing pi-margin-bottom-5">
-								Kindra Hall
-							</p>
-							<p class="pi-italic">
-								Associate Director <a href="#">Company Inc.</a>
-							</p>
-						</div>
-						<!-- End slide -->
-				
-					</div>
-					<!-- End col 8 -->
-					
-				</div>
-				<!-- End row -->
-				
-			</div>
-		</div>
-		<!-- End slider -->
-		
-	</div>
-</div>
-
-<!-- - - - - - - - - - END SECTION - - - - - - - - - -->
-
-<!-- - - - - - - - - - SECTION - - - - - - - - - -->
-
-<div class="pi-section-w pi-section-white">
-	<div class="pi-section pi-padding-bottom-30">
-		
-		<!-- Row -->
-		<div class="pi-row pi-padding-bottom-10">	
-			
-			<!-- Col 6 -->
-			<div class="pi-col-sm-6 pi-padding-bottom-40">
-
-				<h2 class="h4 pi-weight-700 pi-uppercase pi-letter-spacing pi-has-bg pi-margin-bottom-20">
-					Who We Are
-				</h2>
-
-				<p class="lead-24 pi-weight-300">
-					<em>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus autem</em>
-				</p>
-				
-				<p>
-					Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est
-					eligendi optio cumque nihil impedit quo facilis est et expedita distinctio minus id quod maxime placeat facere possimus, omnis voluptas
-					assumenda est, <a href="#">omnis dolor repellendus</a>. Temporibus autem cum soluta nobis est
-					eligendi quibusdam et aut officiis debitis autem cum soluta nobis est aut optio cumque nihil.
-				</p>
-
-			</div>
-			<!-- End col 6 -->
-			
-			<!-- Col 6 -->
-			<div class="pi-col-sm-6 pi-padding-bottom-40">
-			
-				<h2 class="h4 pi-weight-700 pi-uppercase pi-letter-spacing pi-has-bg pi-margin-bottom-30">
-					We Are Good At
-				</h2>
-				
-				<!-- Progress bar -->
-				<div class="pi-counter pi-counter-line" data-counter-type="line" data-count-from="0" data-count-to="85" data-easing="easeInCirc" data-duration="2000" data-frames-per-second="10">
-					
-					<div class="pi-counter-count">
-						<p><i class="icon-pencil pi-icon-left"></i>System design 85%</p>
-						<div class="pi-counter-progress pi-bar-one"></div>
-					</div>
-					
-				</div>
-				<!-- End progress bar -->
-
-				<!-- Progress bar -->
-				<div class="pi-counter pi-counter-line" data-counter-type="line" data-count-from="0" data-count-to="95" data-easing="easeInCirc" data-duration="2000" data-frames-per-second="10">
-
-					<div class="pi-counter-count">
-						<p><i class="icon-database pi-icon-left"></i>Data analysis 95%</p>
-						<div class="pi-counter-progress pi-bar-two"></div>
-					</div>
-
-				</div>
-				<!-- End progress bar -->
-				
-				<!-- Progress bar -->
-				<div class="pi-counter pi-counter-line pi-slave" data-counter-type="line" data-count-from="0" data-count-to="98" data-easing="easeInCirc" data-duration="2000" data-frames-per-second="10">
-					
-					<div class="pi-counter-count">
-						<p><i class="icon-link pi-icon-left"></i>Link-level analysis 98%</p>
-						<div class="pi-counter-progress pi-bar-three"></div>
-					</div>
-					
-				</div>
-				<!-- End progress bar -->
-				
-				<!-- Progress bar -->
-				<div class="pi-counter pi-counter-line pi-slave" data-counter-type="line" data-count-from="0" data-count-to="85" data-easing="easeInCirc" data-duration="2000" data-frames-per-second="10">
-					
-					<div class="pi-counter-count">
-						<p><i class="icon-eye pi-icon-left"></i>Coverage modelling 85%</p>
-						<div class="pi-counter-progress pi-bar-four"></div>
-					</div>
-					
-				</div>
-				<!-- End progress bar -->
-
-			</div>
-			<!-- End col 6 -->
-			
-		</div>
-		<!-- End row -->
-		
-		<h2 class="h4 pi-weight-700 pi-uppercase pi-letter-spacing pi-has-bg pi-margin-bottom-30">
-			Meet The Team
-		</h2>
-		
-		<!-- Row -->
-		<div class="pi-row">
-			
-			<!-- Col 3 -->
-			<div class="pi-col-xs-6 pi-col-sm-3 pi-padding-bottom-20">
-			
-				<!-- Team member -->
-					<div class="pi-img-w pi-img-round-corners pi-img-shadow">
-						<img src="img_external/team/leader-11.jpg" alt="">
-						<div class="pi-img-overlay pi-img-overlay-darker">
-							<div class="pi-caption-centered">
-								<div>
-									<a href="#">
-										<span class="pi-caption-icon pi-caption-icon-small pi-caption-scale icon-facebook"></span>
-									</a>
-									<a href="#">
-										<span class="pi-caption-icon pi-caption-icon-small pi-caption-scale icon-twitter"></span>
-									</a>
-									<a href="#">
-										<span class="pi-caption-icon pi-caption-icon-small pi-caption-scale icon-dribbble"></span>
-									</a>
-									<p>
-										Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<h6 class="pi-weight-700 pi-uppercase pi-letter-spacing">Mike Ross</h6>	
-					<p class="pi-italic pi-text-base">
-						Co-Founder, Art Director
-					</p>
-				<!-- End team member -->
-				
-			</div>
-			<!-- End col 3 -->
-			
-			<!-- Col 3 -->			
-			<div class="pi-col-xs-6 pi-col-sm-3 pi-padding-bottom-20">
-			
-				<!-- Team member -->
-					<div class="pi-img-w pi-img-round-corners pi-img-shadow">
-						<img src="img_external/team/leader-22.jpg" alt="">
-						<div class="pi-img-overlay pi-img-overlay-darker">
-							<div class="pi-caption-centered">
-								<div>
-									<a href="#">
-										<span class="pi-caption-icon pi-caption-icon-small pi-caption-scale icon-facebook"></span>
-									</a>
-									<a href="#">
-										<span class="pi-caption-icon pi-caption-icon-small pi-caption-scale icon-github"></span>
-									</a>
-									<p>
-										Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<h6 class="pi-weight-700 pi-uppercase pi-letter-spacing">Mattias Nuffer</h6>	
-					<p class="pi-italic pi-text-base">
-						Co-Founder, Web Developer
-					</p>
-				<!-- End team member -->
-				
-			</div>
-			<!-- End col 3 -->
-
-			<div class="pi-clearfix pi-visible-xs"></div>
-
-			<!-- Col 3 -->	
-			<div class="pi-col-xs-6 pi-col-sm-3 pi-padding-bottom-20">
-			
-				<!-- Team member -->
-					<div class="pi-img-w pi-img-round-corners pi-img-shadow">
-						<img src="img_external/team/leader-33.jpg" alt="">
-						<div class="pi-img-overlay pi-img-overlay-darker">
-							<div class="pi-caption-centered">
-								<div>
-									<a href="#">
-										<span class="pi-caption-icon pi-caption-icon-small pi-caption-scale icon-facebook"></span>
-									</a>
-									<a href="#">
-										<span class="pi-caption-icon pi-caption-icon-small pi-caption-scale icon-instagram"></span>
-									</a>
-									<p>
-										Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<h6 class="pi-weight-700 pi-uppercase pi-letter-spacing">Kindra Hall</h6>	
-					<p class="pi-italic pi-text-base">
-						Web & Graphic Designer
-					</p>
-				<!-- End team member -->
-				
-			</div>
-			<!-- End col 3 -->
-			
-			<!-- Col 3 -->	
-			<div class="pi-col-xs-6 pi-col-sm-3 pi-padding-bottom-20">
-			
-				<!-- Team member -->
-					<div class="pi-img-w pi-img-round-corners pi-img-shadow">
-						<img src="img_external/team/leader-44.jpg" alt="">
-						<div class="pi-img-overlay pi-img-overlay-darker">
-							<div class="pi-caption-centered">
-								<div>
-									<a href="#">
-										<span class="pi-caption-icon pi-caption-icon-small pi-caption-scale icon-instagram"></span>
-									</a>
-									<p>
-										Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<h6 class="pi-weight-700 pi-uppercase pi-letter-spacing">Jim Terrell</h6>	
-					<p class="pi-italic pi-text-base">
-						Client Manager
-					</p>
-				<!-- End team member -->
-				
-			</div>	
-			<!-- End col 3 -->
-			
-		</div>
-		<!-- End row -->
-		
-	</div>
-</div>
-
-<!-- - - - - - - - - - END SECTION - - - - - - - - - -->
-
-<!-- - - - - - - - - - SECTION - - - - - - - - - -->
-
-<div class="pi-section-w pi-section-parallax" style="background-image: url(img_external/gallery/new-york.jpg);">
-	<div class="pi-texture pi-section-overlay-base"></div>
-	<div class="pi-section pi-padding-bottom-30">
-		
-		<!-- Row -->
-		<div class="pi-row pi-grid-small-margins pi-text-center">
-			
-			<!-- Col 3 -->
-			<div class="pi-col-sm-3 pi-col-2xs-6 pi-padding-bottom-20">
-				<div class="pi-counter pi-counter-simple" data-count-from="0" data-count-to="5" data-easing="easeInCirc" data-duration="1000" data-frames-per-second="0">
-					<div class="pi-counter-count pi-counter-count-big pi-text-white pi-weight-300">
-					
-						<p>
-							<i class="icon-briefcase pi-icon pi-icon-big pi-text-white"></i>
-						</p>
-					
-						<div class="pi-counter-number">5</div>
-
-					</div>
-					<p>Sed ut perspic unde</p>
-				</div>
-			</div>
-			<!-- End col 3 -->
-			
-			<!-- Col 3 -->
-			<div class="pi-col-sm-3 pi-col-2xs-6 pi-padding-bottom-20">
-				<div class="pi-counter pi-counter-simple" data-count-from="0" data-count-to="26" data-easing="easeInCirc" data-duration="2000" data-frames-per-second="10">
-					<div class="pi-counter-count pi-counter-count-big pi-text-white pi-weight-300">
-
-						<p>
-							<i class="icon-globe pi-icon pi-icon-big pi-text-white"></i>
-						</p>
-
-						$<span class="pi-counter-number">26</span>
-
-					</div>
-					<p>Deserunt mollitia animi</p>
-				</div>
-			</div>
-			<!-- End col 3 -->
-			
-			<!-- Col 3 -->
-			<div class="pi-col-sm-3 pi-col-2xs-6 pi-padding-bottom-20">
-				<div class="pi-counter pi-counter-simple" data-count-from="0" data-count-to="73" data-easing="easeInCirc" data-duration="3000" data-frames-per-second="10">
-					<div class="pi-counter-count pi-counter-count-big pi-text-white pi-weight-300">
-					
-						<p>
-							<i class="icon-download pi-icon pi-icon-big pi-text-white"></i>
-						</p>
-					
-						<span class="pi-counter-number">73</span>%
-
-					</div>
-					<p>Temporibus autem</p>
-				</div>
-			</div>
-			<!-- End col 3 -->
-			
-			<!-- Col 3 -->
-			<div class="pi-col-sm-3 pi-col-2xs-6 pi-padding-bottom-20">
-				<div class="pi-counter pi-counter-simple" data-count-from="0" data-count-to="59" data-easing="easeInCirc" data-duration="4000" data-frames-per-second="10">
-					<div class="pi-counter-count pi-counter-count-big pi-text-white pi-weight-300">
-					
-						<p>
-							<i class="icon-paper-plane pi-icon pi-icon-big pi-text-white"></i>
-						</p>
-					
-						<span class="pi-counter-number">59</span>k
-
-					</div>
-					<p>Similique sunt in culpa</p>
-				</div>
-			</div>
-			<!-- End col 3 -->
-			
-		</div>
-		<!-- End row -->
-		
-	</div>
-</div>
-
-<!-- - - - - - - - - - END SECTION - - - - - - - - - --></div>
+</div></div>
 
 <!-- Footer -->
 <!-- Widget area -->
@@ -1636,26 +800,16 @@
 
 <script src="3dParty/jquery-1.11.0.min.js"></script>
 <script src="3dParty/bootstrap/js/bootstrap.min.js"></script>
-<script src="3dParty/jquery.touchSwipe.min.js"></script>
-<script src="3dParty/gauge.min.js"></script>
-<script src="3dParty/inview.js"></script>
-<script src="3dParty/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-<script src="3dParty/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script src="3dParty/google-code-prettify/prettify.js"></script>
 <script src="3dParty/requestAnimationFramePolyfill.min.js"></script>
 <script src="3dParty/jquery.placeholder.js"></script>
 <script src="scripts/pi.tooltip.js"></script>
 <script src="scripts/pi.init.tooltip.js"></script>
+<script src="3dParty/jquery.easing.1.3.js"></script>
 <script src="3dParty/jquery.scrollTo.min.js"></script>
 <script src="3dParty/colorbox/jquery.colorbox-min.js"></script>
-<script src="scripts/pi.init.revolutionSlider.js"></script>
 <script src="scripts/pi.global.js"></script>
-<script src="scripts/pi.slider.js"></script>
-<script src="scripts/pi.init.slider.js"></script>
-<script src="3dParty/jquery.easing.1.3.js"></script>
-<script src="scripts/pi.counter.js"></script>
-<script src="scripts/pi.init.counter.js"></script>
-<script src="scripts/pi.parallax.js"></script>
-<script src="scripts/pi.init.parallax.js"></script>
+<script src="scripts/pi.init.prettify.js"></script>
 
 
 </body>
