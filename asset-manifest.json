@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2dd4fdc5.css",
-    "main.js": "/static/js/main.4fe9273b.js",
+    "main.css": "/static/css/main.a607aad7.css",
+    "main.js": "/static/js/main.755ff197.js",
     "static/media/fa-duotone-900.svg": "/static/media/fa-duotone-900.8e81e0addb6133272c03.svg",
     "static/media/fa-light-300.svg": "/static/media/fa-light-300.69b69de6d918858c602c.svg",
     "static/media/fa-regular-400.svg": "/static/media/fa-regular-400.ccc0de5a89a22f7df0a0.svg",
@@ -38,6 +38,7 @@
     "static/media/protfolio-img04.png": "/static/media/protfolio-img04.5d3c774ddd7fbc52eae1.png",
     "static/media/match-bg.png": "/static/media/match-bg.8596d57423c77f95c899.png",
     "static/media/protfolio-img02.png": "/static/media/protfolio-img02.7fcc6b13bd14e6455371.png",
+    "static/media/games.jpg": "/static/media/games.12e1971e9606992f4def.jpg",
     "static/media/fa-brands-400.eot": "/static/media/fa-brands-400.59b4d0d406e282f4231f.eot",
     "static/media/fa-brands-400.ttf": "/static/media/fa-brands-400.c0f9dccd4ca01dd0217f.ttf",
     "static/media/fa-solid-900.woff2": "/static/media/fa-solid-900.d7475e39f70533c40ca5.woff2",
@@ -45,30 +46,19 @@
     "static/media/dripicons-v2.svg": "/static/media/dripicons-v2.3aa28ea24ecf67f6c113.svg",
     "static/media/fa-brands-400.woff": "/static/media/fa-brands-400.97667d8cd09ef6acdf71.woff",
     "static/media/about-home-1.jpg": "/static/media/about-home-1.7572ceb9cefaf7b42310.jpg",
-    "static/media/match-bg2.png": "/static/media/match-bg2.578e58fde330d74dd406.png",
     "static/media/f_logo.png": "/static/media/f_logo.de12ff1e4347b5202b16.png",
     "static/media/logo.png": "/static/media/logo.de12ff1e4347b5202b16.png",
     "static/media/about-img2.jpg": "/static/media/about-img2.7b23fcea8d07826e0534.jpg",
     "static/media/contant-hd.png": "/static/media/contant-hd.f48e69191f0b2f2f363e.png",
     "static/media/fa-brands-400.woff2": "/static/media/fa-brands-400.6e6a4a81a7f71c0ba134.woff2",
-    "static/media/team_img03.png": "/static/media/team_img03.f5685f8159088c126679.png",
     "static/media/team2.png": "/static/media/team2.742f984a960492f84cb5.png",
-    "static/media/team_img07.png": "/static/media/team_img07.6cbdb677cf022ee0653f.png",
-    "static/media/team_img05.png": "/static/media/team_img05.3dc6a506631005a0e5b3.png",
     "static/media/team5.png": "/static/media/team5.3de0a005ee72db6b7d0f.png",
-    "static/media/team_img02.png": "/static/media/team_img02.bbd4a98e021771d3d359.png",
-    "static/media/team_img04.png": "/static/media/team_img04.aa5f79fddf2941ad66e6.png",
-    "static/media/team_img06.png": "/static/media/team_img06.a53db946048f706a9a8d.png",
     "static/media/dripicons-v2.eot": "/static/media/dripicons-v2.7f392f1e4787b46b3e8b.eot",
     "static/media/dripicons-v2.ttf": "/static/media/dripicons-v2.09c9c870ef8f9cffcc8f.ttf",
     "static/media/team6.png": "/static/media/team6.2576c81949ff865ecc48.png",
     "static/media/team1.png": "/static/media/team1.ea116538b1306d7544ee.png",
     "static/media/team3.png": "/static/media/team3.b7bb8cbcae0a4d760a5c.png",
-    "static/media/team7.png": "/static/media/team7.2932bfbcf96ada4d700f.png",
     "static/media/team4.png": "/static/media/team4.155814349c61a1118f6f.png",
-    "static/media/team10.png": "/static/media/team10.c888e5496eb8e54f095a.png",
-    "static/media/team8.png": "/static/media/team8.b56d8b7ab9d90e2a6b62.png",
-    "static/media/team9.png": "/static/media/team9.ef6a8b53fdf6bf91955f.png",
     "static/media/dripicons-v2.woff": "/static/media/dripicons-v2.f19dcc0358afed69d277.woff",
     "static/media/about-img3.png": "/static/media/about-img3.87b35a7f4aad984d3cbc.png",
     "static/media/flaticon.eot?": "/static/media/flaticon.8587d9f024af6d451547.eot",
@@ -80,11 +70,11 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.2dd4fdc5.css.map": "/static/css/main.2dd4fdc5.css.map",
-    "main.4fe9273b.js.map": "/static/js/main.4fe9273b.js.map"
+    "main.a607aad7.css.map": "/static/css/main.a607aad7.css.map",
+    "main.755ff197.js.map": "/static/js/main.755ff197.js.map"
   },
   "entrypoints": [
-    "static/css/main.2dd4fdc5.css",
-    "static/js/main.4fe9273b.js"
+    "static/css/main.a607aad7.css",
+    "static/js/main.755ff197.js"
   ]
 }
