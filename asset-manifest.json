@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.af0fe6ef.css",
-    "main.js": "/static/js/main.72216ad2.js",
+    "main.css": "/static/css/main.7d112413.css",
+    "main.js": "/static/js/main.9f9e9bbe.js",
     "static/media/arch_games.mp4": "/static/media/arch_games.5323ef35f60e51184128.mp4",
     "static/media/header.mp4": "/static/media/header.9b53caa5e4c42e84a251.mp4",
     "static/media/fa-duotone-900.svg": "/static/media/fa-duotone-900.8e81e0addb6133272c03.svg",
@@ -12,7 +12,6 @@
     "static/media/inner_b3.png": "/static/media/inner_b3.c93a91ef0d3a5a68a63b.png",
     "static/media/inner_b2.png": "/static/media/inner_b2.a10fd8418736e373c4ad.png",
     "static/media/fa-brands-400.svg": "/static/media/fa-brands-400.67baf29af14564cc5f35.svg",
-    "static/media/map-contact.png": "/static/media/map-contact.34cff14b1bc28ca8cbb2.png",
     "static/media/fa-duotone-900.eot": "/static/media/fa-duotone-900.933243d3f4a403d075ab.eot",
     "static/media/fa-duotone-900.ttf": "/static/media/fa-duotone-900.129970d20805c489d192.ttf",
     "static/media/logo-new.png": "/static/media/logo-new.f82d73c2da281fefe10c.png",
@@ -22,7 +21,6 @@
     "static/media/fa-regular-400.ttf": "/static/media/fa-regular-400.7606d9430562a89b8ac6.ttf",
     "static/media/fa-solid-900.eot": "/static/media/fa-solid-900.259e7659316cb06e8b14.eot",
     "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.deb100ec94ec63cec6e7.ttf",
-    "static/media/slider_img_bg.png": "/static/media/slider_img_bg.248d3301542e97679a8f.png",
     "static/media/fa-duotone-900.woff": "/static/media/fa-duotone-900.e4d287fdc7be3fa2c22a.woff",
     "static/media/fa-light-300.woff": "/static/media/fa-light-300.14338d088c9b86258cdb.woff",
     "static/media/fa-regular-400.woff": "/static/media/fa-regular-400.06bf81a201178decf29a.woff",
@@ -32,7 +30,6 @@
     "static/media/about-hd.png": "/static/media/about-hd.c25316c95f6a72a1f06a.png",
     "static/media/fa-regular-400.woff2": "/static/media/fa-regular-400.6f182a403c97e0e79648.woff2",
     "static/media/flaticon.svg?": "/static/media/flaticon.925a7326092bae7254c1.svg",
-    "static/media/match-bg.png": "/static/media/match-bg.8596d57423c77f95c899.png",
     "static/media/games.jpg": "/static/media/games.12e1971e9606992f4def.jpg",
     "static/media/fa-brands-400.eot": "/static/media/fa-brands-400.59b4d0d406e282f4231f.eot",
     "static/media/fa-brands-400.ttf": "/static/media/fa-brands-400.c0f9dccd4ca01dd0217f.ttf",
@@ -43,14 +40,9 @@
     "static/media/about-img2.jpg": "/static/media/about-img2.7b23fcea8d07826e0534.jpg",
     "static/media/contant-hd.png": "/static/media/contant-hd.f48e69191f0b2f2f363e.png",
     "static/media/fa-brands-400.woff2": "/static/media/fa-brands-400.6e6a4a81a7f71c0ba134.woff2",
-    "static/media/team2.png": "/static/media/team2.742f984a960492f84cb5.png",
-    "static/media/team5.png": "/static/media/team5.3de0a005ee72db6b7d0f.png",
     "static/media/dripicons-v2.eot": "/static/media/dripicons-v2.7f392f1e4787b46b3e8b.eot",
     "static/media/dripicons-v2.ttf": "/static/media/dripicons-v2.09c9c870ef8f9cffcc8f.ttf",
-    "static/media/team6.png": "/static/media/team6.2576c81949ff865ecc48.png",
-    "static/media/team1.png": "/static/media/team1.ea116538b1306d7544ee.png",
-    "static/media/team3.png": "/static/media/team3.b7bb8cbcae0a4d760a5c.png",
-    "static/media/team4.png": "/static/media/team4.155814349c61a1118f6f.png",
+    "static/media/error-bg.png": "/static/media/error-bg.ba94a840e85b627920b1.png",
     "static/media/dripicons-v2.woff": "/static/media/dripicons-v2.f19dcc0358afed69d277.woff",
     "static/media/about-img3.png": "/static/media/about-img3.87b35a7f4aad984d3cbc.png",
     "static/media/flaticon.eot?": "/static/media/flaticon.8587d9f024af6d451547.eot",
@@ -58,11 +50,11 @@
     "static/media/flaticon.woff?": "/static/media/flaticon.3c4168b6232c51f5b7c1.woff",
     "static/media/flaticon.woff2?": "/static/media/flaticon.b1ff87e5ca3a3a285f60.woff2",
     "index.html": "/index.html",
-    "main.af0fe6ef.css.map": "/static/css/main.af0fe6ef.css.map",
-    "main.72216ad2.js.map": "/static/js/main.72216ad2.js.map"
+    "main.7d112413.css.map": "/static/css/main.7d112413.css.map",
+    "main.9f9e9bbe.js.map": "/static/js/main.9f9e9bbe.js.map"
   },
   "entrypoints": [
-    "static/css/main.af0fe6ef.css",
-    "static/js/main.72216ad2.js"
+    "static/css/main.7d112413.css",
+    "static/js/main.9f9e9bbe.js"
   ]
 }
