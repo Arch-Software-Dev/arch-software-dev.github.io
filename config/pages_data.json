@@ -1,71 +1,68 @@
 {
   "services": [
     {
-      "title_first": "Application",
-      "title_second": "Development",
+      "title": "Application Development",
       "main_description": "From idea to deployment, Arch Software specializes in creating scalable, user-centric applications. Whether you’re a startup seeking a minimum viable product (MVP) or an established enterprise looking to modernize existing systems, our team transforms your vision into robust, high-performing software solutions.",
       "order_list": [
         {
           "title": "Custom Web & Mobile Apps",
-          "description": " - Tailored to meet unique business requirements."
+          "description": "Tailored to meet unique business requirements."
         },
         {
           "title": "Cloud Integration",
-          "description": " - Seamless integration with leading cloud platforms for reliability and scalability."
+          "description": "Seamless integration with leading cloud platforms for reliability and scalability."
         },
         {
           "title": "UI/UX Design",
-          "description": " - Engaging and intuitive interfaces that enhance user satisfaction and retention."
+          "description": "Engaging and intuitive interfaces that enhance user satisfaction and retention."
         },
         {
           "title": "Maintenance & Support",
-          "description": " - Ongoing technical assistance to keep your application future-proof."
+          "description": "Ongoing technical assistance to keep your application future-proof."
         }
       ]
     },
     {
-      "title_first": "Game",
-      "title_second": "Development",
+      "title": "Game Development",
       "main_description": "We bring virtual worlds to life with our passion for gaming and interactive experiences. Our diverse skill set includes 2D and 3D art, game mechanics design, and cross-platform development, ensuring captivating gameplay on all major platforms.",
       "order_list": [
         {
           "title": "Conceptualization & Prototyping",
-          "description": " - Brainstorming and validating game ideas to create solid foundations."
+          "description": "Brainstorming and validating game ideas to create solid foundations."
         },
         {
           "title": "Multiplatform Development",
-          "description": " - Unity, Unreal Engine, and other leading frameworks for immersive experiences on PC, consoles, and mobile devices."
+          "description": "Unity, Unreal Engine, and other leading frameworks for immersive experiences on PC, consoles, and mobile devices."
         },
         {
           "title": "Art & Animation",
-          "description": " - Stunning visuals and fluid animations that captivate players."
+          "description": "Stunning visuals and fluid animations that captivate players."
         },
         {
           "title": "QA & Testing",
-          "description": " - Thorough testing to deliver polished, bug-free games that delight audiences."
+          "description": "Thorough testing to deliver polished, bug-free games that delight audiences."
         }
       ]
     },
     {
-      "title_first": "Automation",
-      "title_second": "Programming",
+      "title": "Automation Programming",
       "main_description": "Drive efficiency across your organization with our intelligent automation solutions. By streamlining repetitive processes and integrating systems, we help you reduce costs, minimize errors, and boost productivity.",
       "order_list": [
         {
           "title": "Process Automation",
-          "description": " - Identify and automate business workflows to save time and resources."
+          "description": "Identify and automate business workflows to save time and resources."
         },
         {
           "title": "Data Integration",
-          "description": " - Centralize data and maintain accuracy across multiple platforms."
+          "description": "Centralize data and maintain accuracy across multiple platforms."
         },
         {
           "title": "Scripting & Tool Development",
-          "description": " - Custom scripts and tools to handle specialized tasks in your unique environment."
+          "description": "Custom scripts and tools to handle specialized tasks in your unique environment."
         },
         {
           "title": "RPA & AI Integration",
-          "description": " - Implement robotic process automation (RPA) and AI-powered solutions for next-level efficiency."
+          "description": "Implement robotic process automation (RPA) and AI-powered solutions for next-level efficiency."
         }
       ]
     }
@@ -95,6 +92,37 @@
         "title": "Maintenance & Enhancement",
         "description": "Post-deployment, we continue to monitor performance, address issues, and deliver updates to keep you ahead of the curve."
       }
-    ]
+    ],
+    "whyChoose": {
+      "title": "Why Choose Arch Software?",
+      "description": "It’s simple. We have a solution for every problem and your IT needs are in expert hands.",
+      "list": [
+        {
+          "value": "expert_team",
+          "title": "EXPERT TEAM",
+          "description": "Our dedicated professionals possess deep technical expertise and a passion for innovation."
+        },
+        {
+          "value": "solutions",
+          "title": "Tailored Solutions",
+          "description": "We understand that every project is unique. We collaborate closely with clients to deliver custom-built solutions."
+        },
+        {
+          "value": "support",
+          "title": "End-to-End Support",
+          "description": "From initial consultation to post-launch maintenance, we are committed to supporting your project’s full lifecycle."
+        },
+        {
+          "value": "methodologies",
+          "title": "Agile Methodologies",
+          "description": "Our flexible approach ensures transparency, adaptability, and timely delivery."
+        },
+        {
+          "value": "quality",
+          "title": "Focus on Quality",
+          "description": "We adhere to industry-leading standards and best practices, ensuring your software runs seamlessly and securely."
+        }
+      ]
+    }
   }
 }
