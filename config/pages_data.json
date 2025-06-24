@@ -65,6 +65,62 @@
           "description": "Implement robotic process automation (RPA) and AI-powered solutions for next-level efficiency."
         }
       ]
+    },
+    {
+      "title": "AI Development",
+      "main_description": "At Arch Software, we design, build, and adapt artificial intelligence systems tailored to your business needs. Whether you're automating routine workflows or deploying intelligent systems to handle complex tasks, our AI solutions are built for reliability, scalability, and control.",
+      "order_list": [
+        {
+          "sub_title": "What We Do",
+          "data": [
+            {
+              "title": "Custom AI Models",
+              "description": "We develop machine learning and AI models to analyze data, make decisions, and power intelligent applications across diverse industries."
+            },
+            {
+              "title": "Task Automation",
+              "description": "We build AI systems that automate repetitive and logic-driven tasks—reducing manual labor and increasing operational speed."
+            },
+            {
+              "title": "AI System Integration",
+              "description": "Our team integrates AI into existing software stacks, extending functionality and enabling intelligent behavior in legacy and new platforms."
+            },
+            {
+              "title": "Process Optimization",
+              "description": "Using AI, we streamline business processes, improve resource allocation, and reduce errors through real-time decision-making systems."
+            },
+            {
+              "title": "Natural Language Processing (NLP)",
+              "description": "We create and customize AI that understands and generates human language—useful in chatbots, document parsing, and internal tools."
+            },
+            {
+              "title": "Ongoing Model Training & Tuning",
+              "description": "Arch Software continuously improves AI performance with data updates, feedback loops, and algorithm refinements to meet evolving requirements."
+            }
+          ]
+        },
+        {
+          "sub_title": "Applications",
+          "data": [
+            {
+              "description": "Workflow and task automation"
+            },
+
+            {
+              "description": "Predictive analytics"
+            },
+            {
+              "description": "Intelligent data extraction"
+            },
+            {
+              "description": "AI-powered user interfaces"
+            },
+            {
+              "description": "Decision support systems"
+            }
+          ]
+        }
+      ]
     }
   ],
   "home": {
